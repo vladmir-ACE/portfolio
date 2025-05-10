@@ -7,10 +7,11 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NavBarComponent } from './shared/components/navBar/nav-bar.component';
+import { HeaderDescriptionComponent } from './shared/components/head-description/header-description/header-description.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet,NavBarComponent],
+  imports: [RouterLink, RouterOutlet,NavBarComponent,HeaderDescriptionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

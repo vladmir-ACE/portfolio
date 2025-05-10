@@ -62,8 +62,9 @@ interface MenuItem {
   </div>
   <p class="text-white">Test couleur</p>
   <div>
-     <div class="bg-black flex items-center p-4 cursor-pointer">
-      <div class="text-white">Resume</div>
+     <div class="bg-black  text-white flex gap-x-2 items-center p-4 cursor-pointer">
+      <div class="">Resume</div>
+      <nz-icon nzType="download" nzTheme="outline" />
      
      </div>
   </div>
