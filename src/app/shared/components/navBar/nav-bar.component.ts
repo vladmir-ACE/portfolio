@@ -47,7 +47,7 @@ interface MenuItem {
       </ng-container>
 </nz-drawer>
 <!--normal div -->
-<div class="w-full h-[104px] text-lg font-bold flex flex-wrap items-center justify-around hidden md:flex">
+<div class="w-full  text-lg font-bold flex flex-wrap items-center justify-between px-10 hidden md:flex">
 <div class="flex items-center gap-2">
     <div>
     <nz-avatar nzIcon="user" nzSrc="assets/dalv.jpg" [nzSize]="50"></nz-avatar>
@@ -58,14 +58,11 @@ interface MenuItem {
     @for (item of menu; track $index) {
       <div class="cursor-pointer" [routerLink]="item.route">{{item.title}}</div>
     }
-     
   </div>
-  <p class="text-white">Test couleur</p>
   <div>
      <div class="bg-black  text-white flex gap-x-2 items-center p-4 cursor-pointer">
-      <div class="">Resume</div>
+      <div >Resume</div>
       <nz-icon nzType="download" nzTheme="outline" />
-     
      </div>
   </div>
 
