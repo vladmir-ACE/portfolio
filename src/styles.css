@@ -1,9 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "tailwindcss";
 
+/* 🚀 Définition de votre thème personnalisé avec @theme */
 @theme {
+    /* Couleurs (Utilisé pour text-*, bg-*, border-* etc.) */
     --color-midnight: #121063;
     --color-tahiti: #3ab7bf;
     --color-bermuda: #78dcca;
-    ---color-vlad:#F54927
-  }
+    --color-vlad: #F54927; /* Correction des trois tirets */
+
+    /* Tailles de texte (Utilisé pour text-*) */
+    --text-tiny: 5px;
+    --text-micro: 10px;
+    --text-xs-custom: 12px;
+    --text-medium: 20px;
+    --text-large: 30px;
+    --text-hero: 45px;
+
+
+
+    /* 👇 NOUVELLE FAMILLE DE POLICE */
+    --font-outline: "Bungee Outline", sans-serif;
+}
