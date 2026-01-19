@@ -9,7 +9,12 @@ import { HeaderDescriptionComponent } from '../../sections/header-description/he
   imports: [CommonModule,NavBarComponent,HeaderDescriptionComponent],
   template: `
   <vlad-nav-bar/>
+
+  <div class="max-w-[1280px] mx-auto ">
   <vlad-header-description/>
+
+  </div>
+
   `,
   styles:``,
 })

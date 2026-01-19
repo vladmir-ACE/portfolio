@@ -7,7 +7,6 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 
-
 interface MenuItem {
   title: string;
   route: string;
@@ -15,24 +14,43 @@ interface MenuItem {
 
 @Component({
   selector: 'vlad-nav-bar',
- imports: [NzDrawerModule,NzButtonModule,RouterLink, NzIconModule, NzLayoutModule, NzMenuModule,NzAvatarModule],
-  standalone:true,
+  imports: [
+    NzDrawerModule,
+    NzButtonModule,
+    RouterLink,
+    NzIconModule,
+    NzLayoutModule,
+    NzMenuModule,
+    NzAvatarModule,
+  ],
+  standalone: true,
   template: `
-   <div class="p-4 text-lg font-bold w-full flex justify-between items-center md:hidden">
-   <div class="flex gap-2 items-center">
-    <div>
-    <nz-avatar nzIcon="user" nzSrc="assets/dalv.jpg" [nzSize]="50"></nz-avatar>
+    <div
+      class="p-4 text-lg font-bold w-full flex justify-between items-center md:hidden"
+    >
+      <div class="flex gap-2 items-center">
+        <div>
+          <nz-avatar
+            nzIcon="user"
+            nzSrc="assets/dalv.jpg"
+            [nzSize]="50"
+          ></nz-avatar>
+        </div>
+        <div>VLAD</div>
+      </div>
+
+      <div>
+        <nz-icon
+          nzType="bars"
+          nzTheme="outline"
+          class="cursor-pointer"
+          (click)="open()"
+        />
+      </div>
+
     </div>
-    <div>
-    VLAD
-    </div>
-   </div>
-   <div>
-      <nz-icon nzType="bars" nzTheme="outline" class="cursor-pointer" (click)="open()"  />
-   </div>
-</div>
-<!--drawer content -->
-<nz-drawer
+    <!--drawer content -->
+    <nz-drawer
       class="text-lg font-bold"
       [nzClosable]="false"
       [nzVisible]="visible"
@@ -41,32 +59,46 @@ interface MenuItem {
       (nzOnClose)="close()"
     >
       <ng-container *nzDrawerContent>
-      @for (item of menu; track $index) {
-      <div class="cursor-pointer" [routerLink]="item.route">{{item.title}}</div>
-    }
+        @for (item of menu; track $index) {
+        <div class="cursor-pointer" [routerLink]="item.route">
+          {{ item.title }}
+        </div>
+        }
       </ng-container>
-</nz-drawer>
-<!--normal div -->
-<div class="w-full  text-lg font-bold flex flex-wrap items-center justify-between px-10 hidden md:flex">
-<div class="flex items-center gap-2">
-    <div>
-    <nz-avatar nzIcon="user" nzSrc="assets/dalv.jpg" [nzSize]="50"></nz-avatar>
-    </div>
-    VLAD
-   </div>
-  <div class="flex  flex-wrap gap-5  p-4 items-center justify-between">
-    @for (item of menu; track $index) {
-      <div class="cursor-pointer" [routerLink]="item.route">{{item.title}}</div>
-    }
-  </div>
-  <div>
-     <div class="bg-black  text-white flex gap-x-2 items-center p-4 cursor-pointer">
-      <div >Resume</div>
-      <nz-icon nzType="download" nzTheme="outline" />
-     </div>
-  </div>
+    </nz-drawer>
 
-</div>
+    <!--normal div -->
+    <div
+      class="w-full  text-lg font-bold flex flex-wrap items-center justify-between px-10 hidden md:flex"
+    >
+      <div class="flex items-center gap-2">
+        <div>
+          <nz-avatar
+            nzIcon="user"
+            nzSrc="assets/dalv.jpg"
+            [nzSize]="50"
+          ></nz-avatar>
+        </div>
+        VLAD
+      </div>
+
+      <div class="flex  flex-wrap gap-5  p-4 items-center justify-between">
+        @for (item of menu; track $index) {
+        <div class="cursor-pointer" [routerLink]="item.route">
+          {{ item.title }}
+        </div>
+        }
+      </div>
+
+      <div class="my-5">
+        <div
+          class="bg-black  text-white flex gap-x-2 items-center p-4 cursor-pointer"
+        >
+          <div>Resume</div>
+          <nz-icon nzType="download" nzTheme="outline" />
+        </div>
+      </div>
+    </div>
   `,
   styles: `
   nz-icon{
@@ -74,32 +106,29 @@ interface MenuItem {
 
 }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavBarComponent {
-
-
-  menu:MenuItem[]=[
+  menu: MenuItem[] = [
     {
-      title:"About",
-      route:"about"
+      title: 'About',
+      route: 'about',
     },
     {
-      title:"Skills",
-      route:"skills"
+      title: 'Skills',
+      route: 'skills',
     },
     {
-      title:"Projects",
-      route:"projects"
+      title: 'Projects',
+      route: 'projects',
     },
     {
-      title:"Contact me",
-      route:"contact"
-    }
+      title: 'Contact me',
+      route: 'contact',
+    },
+  ];
 
-  ]
-
-  //drawer 
+  //drawer
   visible = false;
 
   open(): void {
@@ -109,5 +138,4 @@ export class NavBarComponent {
   close(): void {
     this.visible = false;
   }
-
 }
