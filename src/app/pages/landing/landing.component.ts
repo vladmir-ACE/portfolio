@@ -2,20 +2,26 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavBarComponent } from '../../sections/navBar/nav-bar.component';
 import { HeaderDescriptionComponent } from '../../sections/header-description/header-description.component';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { SkillsComponent } from '../../sections/skills/skills.component';
 
 @Component({
   selector: 'vlad-app-landing',
   standalone: true,
-  imports: [CommonModule,NavBarComponent,HeaderDescriptionComponent],
+  imports: [CommonModule, NavBarComponent, HeaderDescriptionComponent, SkillsComponent],
   template: `
   <vlad-nav-bar/>
 
-  <div class="max-w-[1280px] mx-auto ">
+  <div class="max-w-[1280px] mx-auto flex flex-col gap-y-5  px-[20px]">
+
   <vlad-header-description/>
+
+  <vlad-landing-section-skills/>
+
 
   </div>
 
   `,
-  styles:``,
+  styles: ``,
 })
-export class LandingComponent {}
+export class LandingComponent { }
