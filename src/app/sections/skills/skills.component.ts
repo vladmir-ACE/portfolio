@@ -28,78 +28,126 @@ export class SkillsComponent {
 
   skillsCard: IconCard[] = [
     {
-      icon: 'vlad:nest',
+      icon: 'vlad:html',
       size: '186px',
       link: 'https://www.facebook.com/vlad.lanwi',
       class: "hover:bg-black hover:text-white",
-      title: "Nest",
+      title: "Html",
       iconClass: "text-[56px]"
     },
     {
-      icon: 'vlad:git',
+      icon: 'vlad:css',
       size: '186px',
       link: 'https://www.facebook.com/vlad.lanwi',
       class: "hover:bg-black hover:text-white",
-      title: "Git",
+      title: "Css",
       iconClass: "text-[56px]"
     },
     {
-      icon: 'vlad:git',
+      icon: 'vlad:javascript',
       size: '186px',
       link: 'https://www.facebook.com/vlad.lanwi',
-      title: "Git",
+      title: "JavaScript",
       class: "hover:bg-black hover:text-white",
       iconClass: "text-[56px]"
     },
     {
-      icon: 'vlad:nest',
+      icon: 'vlad:typescript',
       size: '186px',
       link: 'https://www.facebook.com/vlad.lanwi',
       class: "hover:bg-black hover:text-white",
-      title: "Nest",
+      title: "TypeScript",
       iconClass: "text-[56px]"
     },
     {
-      icon: 'vlad:nest',
+      icon: 'vlad:python',
       size: '186px',
       link: 'https://www.facebook.com/vlad.lanwi',
       class: "hover:bg-black hover:text-white",
-      title: "Nest",
+      title: "Python",
       iconClass: "text-[56px]"
     },
     {
-      icon: 'vlad:nest',
+      icon: 'vlad:dart',
       size: '186px',
       link: 'https://www.facebook.com/vlad.lanwi',
       class: "hover:bg-black hover:text-white",
-      title: "Nest",
+      title: "Dart",
       iconClass: "text-[56px]"
     },
     {
-      icon: 'vlad:nest',
+      icon: 'vlad:angular',
       size: '186px',
       link: 'https://www.facebook.com/vlad.lanwi',
       class: "hover:bg-black hover:text-white",
-      title: "Nest",
+      title: "Angular",
       iconClass: "text-[56px]"
     },
     {
-      icon: 'vlad:nest',
+      icon: 'vlad:vuejs',
       size: '186px',
       link: 'https://www.facebook.com/vlad.lanwi',
       class: "hover:bg-black hover:text-white",
-      title: "Nest",
+      title: "Vue.js",
       iconClass: "text-[56px]"
     },
     {
-      icon: 'vlad:nest',
+      icon: 'vlad:flutter',
       size: '186px',
       link: 'https://www.facebook.com/vlad.lanwi',
       class: "hover:bg-black hover:text-white",
-      title: "Nest",
+      title: "Flutter",
+      iconClass: "text-[56px]"
+    },
+    {
+      icon: 'vlad:nestjs',
+      size: '186px',
+      link: 'https://www.facebook.com/vlad.lanwi',
+      class: "hover:bg-black hover:text-white",
+      title: "NestJS",
+      iconClass: "text-[56px]"
+    },
+    {
+      icon: 'vlad:django',
+      size: '186px',
+      link: 'https://www.facebook.com/vlad.lanwi',
+      class: "hover:bg-black hover:text-white",
+      title: "Django",
+      iconClass: "text-[56px]"
+    },
+    {
+      icon: 'vlad:hasura',
+      size: '186px',
+      link: 'https://www.facebook.com/vlad.lanwi',
+      class: "hover:bg-black hover:text-white",
+      title: "Hasura",
+      iconClass: "text-[56px]"
+    },
+     {
+      icon: 'vlad:github',
+      size: '186px',
+      link: 'https://www.facebook.com/vlad.lanwi',
+      class: "hover:bg-black hover:text-white",
+      title: "GitHub",
+      iconClass: "text-[56px]"
+    },
+    {
+      icon: 'vlad:figma',
+      size: '186px',
+      link: 'https://www.facebook.com/vlad.lanwi',
+      class: "hover:bg-black hover:text-white",
+      title: "Figma",
       iconClass: "text-[56px]"
     },
 
+     {
+      icon: 'vlad:wordpress',
+      size: '186px',
+      link: 'https://www.facebook.com/vlad.lanwi',
+      class: "hover:bg-black hover:text-white",
+      title: "WordPress",
+      iconClass: "text-[56px]"
+    },
   ];
 
 
