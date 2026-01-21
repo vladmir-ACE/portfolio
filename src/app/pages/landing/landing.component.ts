@@ -4,7 +4,7 @@ import { NavBarComponent } from '../../sections/navBar/nav-bar.component';
 import { HeaderDescriptionComponent } from '../../sections/header-description/header-description.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { SkillsComponent } from '../../sections/skills/skills.component';
-import { ExperiencesComponent } from '../../sections/experiences/experiences-component.component';
+import { ExperiencesComponent } from '../../sections/experiences/experiences.component';
 
 @Component({
   selector: 'vlad-app-landing',
