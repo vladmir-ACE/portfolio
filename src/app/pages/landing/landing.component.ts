@@ -5,11 +5,12 @@ import { HeaderDescriptionComponent } from '../../sections/header-description/he
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { SkillsComponent } from '../../sections/skills/skills.component';
 import { ExperiencesComponent } from '../../sections/experiences/experiences.component';
+import { AboutMeComponent } from '../../sections/about-me/about-me.component';
 
 @Component({
   selector: 'vlad-app-landing',
   standalone: true,
-  imports: [CommonModule, NavBarComponent, HeaderDescriptionComponent, SkillsComponent, ExperiencesComponent],
+  imports: [CommonModule, NavBarComponent, HeaderDescriptionComponent, SkillsComponent, ExperiencesComponent, AboutMeComponent],
   template: `
   <vlad-nav-bar/>
 
@@ -20,6 +21,8 @@ import { ExperiencesComponent } from '../../sections/experiences/experiences.com
   <vlad-landing-section-skills/>
 
   <vlad-landing-section-experiences/>
+
+  <vlad-landing-section-about-me/>
 
 
   </div>

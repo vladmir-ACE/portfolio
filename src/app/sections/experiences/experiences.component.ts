@@ -37,10 +37,10 @@ export class ExperiencesComponent {
     },
     {
       icon: 'vlad:dmm',
-      title: "Software Engineer at Kernel",
-      periode: "Jan 2025 - Present",
+      title: "Software Engineer at Dreammore",
+      periode: "Aug 2024 - Jan2025",
       iconClass: "text-[32px]",
-      description: `Working on the development of a core HR (COR / EOR) platform within an Nx monorepo environment, ensuring scalable and well-structured frontend and backend applications. I build responsive and high-quality user interfaces with Angular, delivering pixel-perfect integrations of Figma designs while maintaining strong UX and accessibility standards. On the backend side, I develop robust REST APIs using NestJS and leverage Hasura to expose GraphQL services. I also implement and maintain integrations with multiple external services such as Firebase, Onflow, Evoliz, HubSpot, and Slack to support authentication, payroll, billing, CRM, and internal automation workflows. I collaborate closely with product managers, designers, and engineers to deliver secure, performant, and production-ready solutions aligned with business requirements.`
+      description: `Contributed to the development of a multi-category e-commerce web platform, focused on selling products across different verticals. I was mainly responsible for building and enhancing the frontend experience, ensuring a fully responsive and user-friendly interface across desktop and mobile devices. I worked closely with the backend team to integrate REST APIs, enabling features such as product listing, cart management, and order workflows. Throughout the project, I collaborated with designers and engineers to deliver clean, maintainable code and a smooth end-to-end user experience aligned with business goals.`
     }
 
   ];
