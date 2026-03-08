@@ -48,28 +48,27 @@ import { IconCard, IconCardComponent } from '../../shared/components/icon-card/i
 export class HeaderDescriptionComponent {
 
   socialMedia: IconCard[] = [
-    {
-      icon: 'vlad:instagram',
-      size: '56px',
-      link: 'https://www.facebook.com/vlad.lanwi',
-      class: "hover:bg-black hover:text-white",
-      iconClass: "text-[20px]"
-    },
-    {
-      icon: 'vlad:whatsapp',
-      size: '56px',
-      link: 'https://www.facebook.com/vlad.lanwi',
-      class: "hover:bg-black hover:text-white",
-      iconClass: "text-[20px]"
-    },
-    {
-      icon: 'vlad:linkedin',
-      size: '56px',
-      link: 'https://www.facebook.com/vlad.lanwi',
-      class: "hover:bg-black hover:text-white",
-      iconClass: "text-[20px]"
-    },
-
+  {
+  icon: 'vlad:mail',
+  size: '56px',
+  link: 'mailto:dev.vladmir@gmail.com',
+  class: "hover:bg-black hover:text-white",
+  iconClass: "text-[20px]"
+},
+{
+  icon: 'vlad:whatsapp',
+  size: '56px',
+  link: 'https://wa.me/22893547586',
+  class: "hover:bg-black hover:text-white",
+  iconClass: "text-[20px]"
+},
+{
+  icon: 'vlad:linkedin',
+  size: '56px',
+  link: 'https://www.linkedin.com/in/vladmir-gnouyaro-98894b260/',
+  class: "hover:bg-black hover:text-white",
+  iconClass: "text-[20px]"
+}
   ];
 
 }

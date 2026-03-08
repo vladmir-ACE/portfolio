@@ -30,7 +30,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:html',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Html",
       iconClass: "text-[56px]"
@@ -38,7 +38,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:css',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Css",
       iconClass: "text-[56px]"
@@ -46,7 +46,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:javascript',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       title: "JavaScript",
       class: "hover:bg-black hover:text-white",
       iconClass: "text-[56px]"
@@ -54,7 +54,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:typescript',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "TypeScript",
       iconClass: "text-[56px]"
@@ -62,7 +62,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:python',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Python",
       iconClass: "text-[56px]"
@@ -70,7 +70,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:dart',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Dart",
       iconClass: "text-[56px]"
@@ -78,7 +78,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:angular',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Angular",
       iconClass: "text-[56px]"
@@ -86,7 +86,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:vuejs',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Vue.js",
       iconClass: "text-[56px]"
@@ -94,7 +94,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:flutter',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Flutter",
       iconClass: "text-[56px]"
@@ -102,7 +102,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:nestjs',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "NestJS",
       iconClass: "text-[56px]"
@@ -110,7 +110,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:django',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Django",
       iconClass: "text-[56px]"
@@ -118,7 +118,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:hasura',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Hasura",
       iconClass: "text-[56px]"
@@ -126,7 +126,7 @@ export class SkillsComponent {
      {
       icon: 'vlad:github',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "GitHub",
       iconClass: "text-[56px]"
@@ -134,7 +134,7 @@ export class SkillsComponent {
     {
       icon: 'vlad:figma',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "Figma",
       iconClass: "text-[56px]"
@@ -143,7 +143,7 @@ export class SkillsComponent {
      {
       icon: 'vlad:wordpress',
       size: '186px',
-      link: 'https://www.facebook.com/vlad.lanwi',
+
       class: "hover:bg-black hover:text-white",
       title: "WordPress",
       iconClass: "text-[56px]"
