@@ -9,7 +9,7 @@ import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 
 interface MenuItem {
   title: string;
-  route: string;
+  anchor: string;
 }
 
 @Component({
@@ -28,7 +28,7 @@ interface MenuItem {
     <div
       class="p-4 text-lg font-bold w-full flex justify-between items-center md:hidden"
     >
-      <div class="flex gap-2 items-center">
+      <div class="flex gap-2 items-center cursor-pointer" [routerLink]="['/home']" [fragment]="'home'">
         <div>
           <nz-avatar
             nzIcon="user"
@@ -52,18 +52,25 @@ interface MenuItem {
     <!--drawer content -->
     <nz-drawer
       class="text-lg font-bold"
-      [nzClosable]="false"
+      [nzClosable]="true"
       [nzVisible]="visible"
       nzPlacement="right"
       nzTitle="Menu"
       (nzOnClose)="close()"
     >
       <ng-container *nzDrawerContent>
-        @for (item of menu; track $index) {
-        <div class="cursor-pointer" [routerLink]="item.route">
-          {{ item.title }}
+        <div class="flex flex-col gap-y-4">
+          @for (item of menu; track $index) {
+          <div
+            class="cursor-pointer hover:text-blue-500 transition-colors"
+            [routerLink]="['/home']"
+            [fragment]="item.anchor"
+            (click)="close()"
+          >
+            {{ item.title }}
+          </div>
+          }
         </div>
-        }
       </ng-container>
     </nz-drawer>
 
@@ -71,7 +78,7 @@ interface MenuItem {
     <div
       class="w-full  text-lg font-bold flex flex-wrap items-center justify-between px-10 hidden md:flex"
     >
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 cursor-pointer" [routerLink]="['/home']" [fragment]="'home'">
         <div>
           <nz-avatar
             nzIcon="user"
@@ -84,7 +91,11 @@ interface MenuItem {
 
       <div class="flex  flex-wrap gap-5  p-4 items-center justify-between">
         @for (item of menu; track $index) {
-        <div class="cursor-pointer" [routerLink]="item.route">
+        <div
+          class="cursor-pointer hover:underline"
+          [routerLink]="['/home']"
+          [fragment]="item.anchor"
+        >
           {{ item.title }}
         </div>
         }
@@ -112,19 +123,19 @@ export class NavBarComponent {
   menu: MenuItem[] = [
     {
       title: 'About',
-      route: 'about',
+      anchor: 'about',
     },
     {
       title: 'Skills',
-      route: 'skills',
+      anchor: 'skills',
     },
     {
       title: 'Projects',
-      route: 'projects',
+      anchor: 'projects',
     },
     {
       title: 'Contact me',
-      route: 'contact',
+      anchor: 'contact',
     },
   ];
 

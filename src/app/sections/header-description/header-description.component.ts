@@ -65,7 +65,7 @@ export class HeaderDescriptionComponent {
 {
   icon: 'vlad:linkedin',
   size: '56px',
-  link: 'https://www.linkedin.com/in/vladmir-gnouyaro-98894b260/',
+  link: 'https://www.linkedin.com/in/vladmir-gnouyaro-98894b260',
   class: "hover:bg-black hover:text-white",
   iconClass: "text-[20px]"
 }

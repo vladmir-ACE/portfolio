@@ -16,16 +16,16 @@ import { FooterComponent } from '../../sections/footer/footer';
 
   <div class="max-w-[1280px] mx-auto flex flex-col gap-y-5  mb-5 px-[20px]">
 
-  <vlad-header-description/>
+  <vlad-header-description id="home"/>
 
-  <vlad-landing-section-skills/>
+  <vlad-landing-section-skills id="skills"/>
 
-  <vlad-landing-section-experiences/>
+  <vlad-landing-section-experiences id="projects"/>
 
-  <vlad-landing-section-about-me/>
+  <vlad-landing-section-about-me id="about"/>
 
   </div>
-  <vlad-landing-section-footer/>
+  <vlad-landing-section-footer id="contact"/>
 
   `,
   styles: ``,

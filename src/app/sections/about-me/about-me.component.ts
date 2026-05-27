@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
     <div class="flex lg:max-w-[525px] flex-col gap-y-5">
      <div><div class="text-medium md:text-large"> About <span class="font-bold">Me</span> </div></div>
 
-     <div class="text-xs-custom">
+     <div class="text-sm">
      <p>
     I’m a passionate Full-Stack Developer who genuinely enjoys turning complex problems into simple, elegant solutions.
     I love coding, learning new technologies, and constantly challenging myself to grow as an engineer.
