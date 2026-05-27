@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -28,7 +29,7 @@ interface MenuItem {
     <div
       class="p-4 text-lg font-bold w-full flex justify-between items-center md:hidden"
     >
-      <div class="flex gap-2 items-center cursor-pointer" [routerLink]="['/home']" [fragment]="'home'">
+      <div class="flex gap-2 items-center cursor-pointer" (click)="navigateToAnchor('home')">
         <div>
           <nz-avatar
             nzIcon="user"
@@ -63,9 +64,7 @@ interface MenuItem {
           @for (item of menu; track $index) {
           <div
             class="cursor-pointer hover:text-blue-500 transition-colors"
-            [routerLink]="['/home']"
-            [fragment]="item.anchor"
-            (click)="close()"
+            (click)="navigateToAnchor(item.anchor)"
           >
             {{ item.title }}
           </div>
@@ -120,6 +119,9 @@ interface MenuItem {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavBarComponent {
+  private viewportScroller = inject(ViewportScroller);
+  private router = inject(Router);
+
   menu: MenuItem[] = [
     {
       title: 'About',
@@ -148,5 +150,18 @@ export class NavBarComponent {
 
   close(): void {
     this.visible = false;
+  }
+
+  navigateToAnchor(anchor: string): void {
+    this.visible = false;
+    this.router.navigate(['/home'], { fragment: anchor, replaceUrl: true });
+
+    // On attend que le drawer soit COMPLÈTEMENT fermé (libération du scroll body)
+    setTimeout(() => {
+      const element = document.getElementById(anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 500); 
   }
 }
