@@ -41,7 +41,19 @@ export class ExperiencesComponent {
       periode: "Aug 2024 - Jan2025",
       iconClass: "text-[32px]",
       description: `Contributed to the development of a multi-category e-commerce web platform, focused on selling products across different verticals. I was mainly responsible for building and enhancing the frontend experience, ensuring a fully responsive and user-friendly interface across desktop and mobile devices. I worked closely with the backend team to integrate REST APIs, enabling features such as product listing, cart management, and order workflows. Throughout the project, I collaborated with designers and engineers to deliver clean, maintainable code and a smooth end-to-end user experience aligned with business goals.`
-    }
+    },
+   {
+  image: 'assets/asn_logo.png',
+  title: "Freelance Web Developer",
+  periode: "April 2024 - June 2024",
+  description: `Designed and developed a responsive Angular-based website for the French non-profit organization ASN (Smile with Neurofibromatosis). The platform showcases the association’s mission, activities, and initiatives while raising public awareness about neurofibromatosis, a rare genetic disorder that remains largely unknown to the general public. The website also includes donation features to support affected individuals and help fund the association’s actions. Throughout the project, I focused on delivering an accessible, user-friendly experience and a modern interface that effectively communicates the organization’s message and encourages community engagement.`
+},
+{
+  image: 'assets/agrovision.png',
+  title: "Freelance Web Developer",
+  periode: "April 2024 - June 2024",
+  description: `Designed and developed a WordPress-based website for Agrovision BE, an agricultural consulting firm specializing in agro-pastoral project support, rural development initiatives, and the training of agricultural and livestock technicians. The platform presents the company’s profile, services, and team structure, while also showcasing training programs delivered by the firm and publications such as books and educational resources. The website was built to ensure a clear, professional presentation of the organization’s activities, improve visibility, and facilitate access to its training and knowledge-sharing content.`
+}
 
   ];
 
