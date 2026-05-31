@@ -9,7 +9,7 @@ import { IconCard, IconCardComponent } from '../../shared/components/icon-card/i
   template: `
 
   <div class="w-full">
-      <div class="text-center text-medium md:text-large"> My <span class="font-bold">Skills</span> </div>
+      <div class="text-center text-medium md:text-large" i18n> My <span class="font-bold">Skills</span> </div>
 
       <div class="mt-5 flex gap-4 items-center justify-center flex-wrap">
 

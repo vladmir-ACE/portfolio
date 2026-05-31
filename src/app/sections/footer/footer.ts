@@ -17,7 +17,7 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
         VLAD
   </div>
 
-  <div class="text-white font-bold ">
+  <div class="text-white font-bold " i18n>
     &#64;copyright 2026. All rights reserved.
   </div>
 

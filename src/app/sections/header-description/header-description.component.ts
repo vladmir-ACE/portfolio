@@ -8,17 +8,17 @@ import { IconCard, IconCardComponent } from '../../shared/components/icon-card/i
    <div class="w-full   flex  flex-col-reverse gap-[10px]  lg:flex-row  lg:justify-between  ">
 
    <div class="flex justify-center flex-col gap-2 lg:max-w-[600px]">
-      <div class="text-medium md:text-large">
+      <div class="text-medium md:text-large" i18n>
         👋 I'm <span class="font-bold">Lanwi Vladmir</span>
       </div>
-      <div class="text-medium md:text-large">
+      <div class="text-medium md:text-large" i18n>
         Full-Stack <span class="font-bold">Web & Mobile Developer</span>
       </div>
-      <div class="text-medium md:text-large">
+      <div class="text-medium md:text-large" i18n>
         Turning ideas into elegant digital experiences — based in <span class="font-bold">Togo</span>
       </div>
 
-      <div>
+      <div i18n>
       I design and develop modern web and mobile applications with a strong focus on scalability,
       performance, and clean architecture.
       From backend APIs to intuitive user interfaces, I enjoy building complete digital solutions.

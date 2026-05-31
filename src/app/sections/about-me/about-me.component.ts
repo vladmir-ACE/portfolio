@@ -13,22 +13,22 @@ import { CommonModule } from '@angular/common';
     </div>
 
     <div class="flex lg:max-w-[525px] flex-col gap-y-5">
-     <div><div class="text-medium md:text-large"> About <span class="font-bold">Me</span> </div></div>
+     <div><div class="text-medium md:text-large" i18n> About <span class="font-bold">Me</span> </div></div>
 
      <div class="text-sm">
-     <p>
+     <p i18n>
     I’m a passionate Full-Stack Developer who genuinely enjoys turning complex problems into simple, elegant solutions.
     I love coding, learning new technologies, and constantly challenging myself to grow as an engineer.
     My goal is to build innovative, scalable, and high-performance applications that deliver real value to users.
     </p>
 
-    <p>
+    <p i18n>
     I specialize in Angular for modern and maintainable web applications, and Flutter for building smooth,
     cross-platform mobile experiences. On the backend, I work mainly with Django and NestJS to design secure,
     robust, and well-structured APIs that scale with product needs.
     </p>
 
-    <p>
+    <p i18n>
     Beyond coding, I’m a big sports enthusiast — I enjoy playing football, basketball, and tennis.
     I’m also passionate about cinema and music, which fuel my creativity and help me stay inspired.
     I believe this balance between technology and personal interests allows me to approach development
