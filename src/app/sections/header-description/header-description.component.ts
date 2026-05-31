@@ -1,28 +1,26 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconCard, IconCardComponent } from '../../shared/components/icon-card/icon-card.component';
+import { I18NextModule } from 'angular-i18next';
 
 @Component({
   selector: 'vlad-header-description',
-  imports: [IconCardComponent],
+  imports: [IconCardComponent, I18NextModule],
   template: `
    <div class="w-full   flex  flex-col-reverse gap-[10px]  lg:flex-row  lg:justify-between  ">
 
    <div class="flex justify-center flex-col gap-2 lg:max-w-[600px]">
-      <div class="text-medium md:text-large" i18n>
-        👋 I'm <span class="font-bold">Lanwi Vladmir</span>
+      <div class="text-medium md:text-large">
+        {{ "👋 I'm Lanwi Vladmir" | i18next }}
       </div>
-      <div class="text-medium md:text-large" i18n>
-        Full-Stack <span class="font-bold">Web & Mobile Developer</span>
+      <div class="text-medium md:text-large">
+        {{ "Full-Stack Web & Mobile Developer" | i18next }}
       </div>
-      <div class="text-medium md:text-large" i18n>
-        Turning ideas into elegant digital experiences — based in <span class="font-bold">Togo</span>
+      <div class="text-medium md:text-large">
+        {{ "Turning ideas into elegant digital experiences — based in Togo" | i18next }}
       </div>
 
-      <div i18n>
-      I design and develop modern web and mobile applications with a strong focus on scalability,
-      performance, and clean architecture.
-      From backend APIs to intuitive user interfaces, I enjoy building complete digital solutions.
-      I'm constantly learning new technologies to deliver reliable, maintainable, and future-proof products.
+      <div>
+      {{ "I design and develop modern web and mobile applications with a strong focus on scalability, performance, and clean architecture. From backend APIs to intuitive user interfaces, I enjoy building complete digital solutions. I'm constantly learning new technologies to deliver reliable, maintainable, and future-proof products." | i18next }}
       </div>
 
       <div class="flex gap-x-2">

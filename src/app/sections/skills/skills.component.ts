@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IconCard, IconCardComponent } from '../../shared/components/icon-card/icon-card.component';
+import { I18NextModule } from 'angular-i18next';
 
 @Component({
   selector: 'vlad-landing-section-skills',
   standalone: true,
-  imports: [CommonModule, IconCardComponent],
+  imports: [CommonModule, IconCardComponent, I18NextModule],
   template: `
 
   <div class="w-full">
-      <div class="text-center text-medium md:text-large" i18n> My <span class="font-bold">Skills</span> </div>
+      <div class="text-center text-medium md:text-large"> {{ 'My Skills' | i18next }} </div>
 
       <div class="mt-5 flex gap-4 items-center justify-center flex-wrap">
 

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, LOCALE_ID } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { ViewportScroller, CommonModule } from '@angular/common';
 import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -8,6 +8,7 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { I18NextModule, I18NEXT_SERVICE, ITranslationService } from 'angular-i18next';
 
 interface MenuItem {
   title: string;
@@ -26,6 +27,7 @@ interface MenuItem {
     NzMenuModule,
     NzAvatarModule,
     NzDropDownModule,
+    I18NextModule,
   ],
   standalone: true,
   template: `
@@ -45,12 +47,12 @@ interface MenuItem {
 
       <div class="flex items-center gap-4">
         <a nz-dropdown [nzDropdownMenu]="langMenuMobile" class="text-sm uppercase text-black! flex items-center gap-1">
-          {{ currentLocale === 'fr' ? 'FR' : 'EN' }}
+          {{ i18next.language.split('-')[0] }}
           <nz-icon nzType="down" />
         </a>
         <nz-dropdown-menu #langMenuMobile="nzDropdownMenu">
           <ul nz-menu>
-            <li nz-menu-item (click)="switchLanguage('en-US')">English</li>
+            <li nz-menu-item (click)="switchLanguage('en')">English</li>
             <li nz-menu-item (click)="switchLanguage('fr')">Français</li>
           </ul>
         </nz-dropdown-menu>
@@ -80,7 +82,7 @@ interface MenuItem {
             class="cursor-pointer hover:text-blue-500 transition-colors"
             (click)="navigateToAnchor(item.anchor)"
           >
-            {{ item.title }}
+            {{ item.title | i18next }}
           </div>
           }
         </div>
@@ -109,19 +111,19 @@ interface MenuItem {
           [routerLink]="['/home']"
           [fragment]="item.anchor"
         >
-          {{ item.title }}
+          {{ item.title | i18next }}
         </div>
         }
       </div>
 
       <div class="flex items-center gap-6">
         <a nz-dropdown [nzDropdownMenu]="langMenu" class="text-sm text-black! uppercase flex items-center gap-1 cursor-pointer">
-          {{ currentLocale === 'fr' ? 'FR' : 'EN' }}
+          {{ i18next.language.split('-')[0] }}
           <nz-icon nzType="down" style="font-size: 14px;"/>
         </a>
         <nz-dropdown-menu #langMenu="nzDropdownMenu">
           <ul nz-menu>
-            <li nz-menu-item (click)="switchLanguage('en-US')">English</li>
+            <li nz-menu-item (click)="switchLanguage('en')">English</li>
             <li nz-menu-item (click)="switchLanguage('fr')">Français</li>
           </ul>
         </nz-dropdown-menu>
@@ -130,7 +132,7 @@ interface MenuItem {
           <div
             class="bg-black  text-white flex gap-x-2 items-center p-4 cursor-pointer"
           >
-            <div i18n>Resume</div>
+            <div>{{ 'Resume' | i18next }}</div>
             <nz-icon nzType="download" nzTheme="outline" />
           </div>
         </div>
@@ -148,23 +150,23 @@ interface MenuItem {
 export class NavBarComponent {
   private viewportScroller = inject(ViewportScroller);
   private router = inject(Router);
-  currentLocale = inject(LOCALE_ID);
+  i18next = inject<ITranslationService>(I18NEXT_SERVICE);
 
   menu: MenuItem[] = [
     {
-      title: $localize`About`,
+      title: 'About',
       anchor: 'about',
     },
     {
-      title: $localize`Skills`,
+      title: 'Skills',
       anchor: 'skills',
     },
     {
-      title: $localize`Projects`,
+      title: 'Projects',
       anchor: 'projects',
     },
     {
-      title: $localize`Contact me`,
+      title: 'Contact me',
       anchor: 'contact',
     },
   ];
@@ -194,21 +196,8 @@ export class NavBarComponent {
   }
 
   switchLanguage(locale: string): void {
-    const currentPath = window.location.pathname;
-    let newPath = currentPath;
-
-    if (this.currentLocale === 'fr' && locale === 'en-US') {
-      newPath = currentPath.replace('/fr/', '/en-US/');
-    } else if (this.currentLocale === 'en-US' && locale === 'fr') {
-      newPath = currentPath.replace('/en-US/', '/fr/');
-    } else if (!currentPath.includes('/fr/') && !currentPath.includes('/en-US/')) {
-        // Fallback for development where paths might not have the locale prefix
-        // or for the root URL
-        newPath = `/${locale}/`;
-    }
-
-    if (newPath !== currentPath) {
-        window.location.href = newPath;
-    }
+    this.i18next.changeLanguage(locale).then(() => {
+      window.location.reload();
+    });
   }
 }

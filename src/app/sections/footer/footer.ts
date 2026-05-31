@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { I18NextModule } from 'angular-i18next';
 
 @Component({
   selector: 'vlad-landing-section-footer',
-  imports: [NzAvatarModule],
+  imports: [NzAvatarModule, I18NextModule],
   template: `<div class="bg-black w-full  flex justify-between items-center px-4 py-2">
 
  <div class="flex items-center  text-white gap-2">
@@ -17,8 +18,8 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
         VLAD
   </div>
 
-  <div class="text-white font-bold " i18n>
-    &#64;copyright 2026. All rights reserved.
+  <div class="text-white font-bold ">
+    {{ "@copyright 2026. All rights reserved." | i18next }}
   </div>
 
   </div>`,

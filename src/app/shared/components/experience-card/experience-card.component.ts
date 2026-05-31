@@ -1,6 +1,7 @@
 import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { I18NextModule } from 'angular-i18next';
 
 
 export interface ExperienceCard {
@@ -16,7 +17,7 @@ export interface ExperienceCard {
 @Component({
   selector: 'vlad-shared-ui-experience-card',
   standalone: true,
-  imports: [CommonModule, NzIconModule],
+  imports: [CommonModule, NzIconModule, I18NextModule],
   template: `
    <div class="w-full flex flex-col p-4 text-white border border-white rounded-[10px]" [ngClass]="params().class">
 
@@ -32,17 +33,17 @@ export interface ExperienceCard {
           }
 
         <div class="text-medium font-bold">
-          {{params().title}}
+          {{ params().title | i18next }}
         </div>
 
       </div>
       <div class="text-xs-custom ">
-          {{params().periode}}
+          {{ params().periode }}
       </div>
     </div>
 
     <div class="text-xs-custom">
-      {{params().description}}
+      {{ (params().description || '') | i18next }}
     </div>
 
    </div>
